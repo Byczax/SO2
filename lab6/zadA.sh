@@ -40,18 +40,18 @@ awk '
     {
         if($1 == "Prowadzący:"){
             $1="";
-            gsub(/^[ \t]+/,"");
+            sub(/^[ \t]+/,"");
+            sub(/\r/, "");
             prowadzacy=$0;
             next;
         }
         if (prowadzacy != ""){
-            gsub(/\n/,"",$0);
+            sub(/\n/,"");
             tab[prowadzacy] += length($0)
-            print NR " " length($0)
             }
     }
     END {
         for (element in tab){
-            # print tab[element]  "  " element
+            print tab[element]  "  " element
         }
     }' dodatkowe/doc-tajemnic.txt
