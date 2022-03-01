@@ -1,0 +1,7 @@
+linux-5.11.13/
+*.xz
+*.tgz
+*.txt
+coreutils-8.32/
+dodatkowe/
+
