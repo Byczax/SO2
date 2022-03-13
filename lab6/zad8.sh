@@ -30,7 +30,7 @@
 awk '{
     for(i=1;i<NF;i++){
         sum+=length($i);
-        if(sum>=80){
+        if(sum>=79){
             print ""; 
             sum=length($i);
             }
