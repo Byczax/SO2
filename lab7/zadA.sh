@@ -30,6 +30,20 @@
 # kolejnego zbioru kluczy i wartości.
 #
 
+# THA MONSTER
+sed -r 's#\{(.*)}#\1#;s#"(\w+)":\s+\{([^}]*)\}#<\1>\2</\1>#;s#"(\w+)":\s+""#<\1 />#g;s#"(\w+)":\s+"([^"]*)"#<\1>\2</\1>#g;s#,\s*##g' dodatkowe/simple.json
+
+
+if false;then
+
+sed -r 's_\{(.*)}_\1_;' dodatkowe/simple.json | # remove curly braces on start and end
+sed -r 's_"(\w+)":\s+\{([^}]*)\}_<\1>\2</\1>_' | # get first "deepnes" of THA tags
+sed -r 's_"(\w+)":\s+""_<\1 />_g' | # yu got emptines from your hearth
+sed -r 's_"(\w+)":\s+"([^"]*)"_<\1>\2</\1>_g' | #yHUhUHu got'em this TAGS
+sed 's_,\s*__g' # pay for cleaning
+
+fi
+
 # awk '{
 #     # start="";
 #     # end="";
