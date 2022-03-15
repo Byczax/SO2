@@ -21,4 +21,4 @@
 # literami w tekście.
 #
 
-grep '^#' zad9.sh | sed -r 's/(\s[A-Za-z])\s/\1\&nbsp;/g' 
+grep '^#' zad9.sh | sed -r 's/(\s[A-Za-z])\s/\1\&nbsp;/g'
