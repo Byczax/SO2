@@ -46,7 +46,6 @@ awk '
             next;
         }
         if (prowadzacy != ""){
-            sub(/\n/,"");
             tab[prowadzacy] += length($0)
             }
     }
