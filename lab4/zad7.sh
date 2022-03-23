@@ -24,4 +24,4 @@
 # których nazwa rozpoczyna się wielką literą oraz nie są one wykonywalne.
 # Wyświetlić same nazwy pasujących plików, każdą nazwę w osobnej linii.
 #
-find linux-5.11.13 -type f -name "[A-Z]*.py" \! -executable | sed 's|.*/||' 
+find linux-5.11.13 -type f -name "[A-Z]*.py" ! -executable | sed 's|.*/||' 

@@ -26,3 +26,5 @@
 # (każda nazwa w nowej linii).
 #
 find linux-5.11.13 -type f , -path "*testing*" -prune , -name "*.h" -size 0 | sed 's|.*/||'
+
+# -size 0 === -empty

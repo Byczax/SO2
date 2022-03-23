@@ -27,4 +27,4 @@
 executables=$(find linux-5.11.13 -type f -executable | wc -l)
 bash=$(find linux-5.11.13 -type f -name "*.sh" -executable | wc -l)
  
-echo $bash/$executables 
+echo "$bash/$executables"
