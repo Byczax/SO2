@@ -27,3 +27,4 @@
 # Każdy adres e-mail wyświetlać w osobnej linii, nie wyświetlać nic ponadto.
 #
 grep ';;;;' dodatkowe/listaSluchaczy_E07-19x.csv | cut -d';' -f2 | sed -e 's|^.*\(......\)$|\1@student.pwr.edu.pl|' 
+# better way -> '^[0-9]'

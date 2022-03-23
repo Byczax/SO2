@@ -24,3 +24,5 @@
 # (* – chodzi o wpisy, zawierające adres 0.0.0.0 w kolumnie 5).
 #
 awk '{print $5}' dodatkowe/ss-tulpn | grep 0.0.0.0 | sed 's|.*:||' | sort -u
+
+# cut -f 5 dodatkowe/ss-tulpn???

@@ -23,3 +23,6 @@
 # Źródła znajdują się w katalogu `coreutils-8.32`.
 #
 find coreutils-8.32 -type f | xargs grep -l '^#include <stdio.h>$' | wc -l 
+
+
+# grep  -l '^#include <stdio.h>$' -r coreutils-8.32

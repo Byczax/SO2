@@ -23,5 +23,5 @@
 # Wiadomość ogranicza się wyłącznie do małych znaków alfabetu łacińskiego.
 # Wyświetlić wyłącznie odszyfrowaną treść, nic poza tym.
 #
-tr '[a-z]' '[x-za-w]' < dodatkowe/cezar 
+tr '[:lower:]' 'x-za-w' < dodatkowe/cezar 
 

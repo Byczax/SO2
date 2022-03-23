@@ -22,4 +22,4 @@
 # portów, bez protokołów i bez powtórzeń, każdy wypisany w osobnej linii.
 # (* – wyszukać wszystkie linie, rozpoczynające się od słowa 'syslog')
 #
-grep syslog* dodatkowe/etc-services | sed 's|.* ||;s|/.*||' | sort -u
+grep "syslog" dodatkowe/etc-services | sed 's|.* ||;s|/.*||' | sort -u
