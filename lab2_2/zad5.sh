@@ -24,8 +24,8 @@
 
 
 for icao_file in dane/icao/*;do
-    file=$(echo $icao_file | sed -e 's|.*/||' )
-    if ! test -f dane/backup/$file;then
-        echo $file
+    file=$(basename "$icao_file" )
+    if ! test -f "dane/backup/$file";then
+        echo "$file"
     fi
 done

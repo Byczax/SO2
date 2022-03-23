@@ -25,11 +25,11 @@
 #
 baza=$(<dane/poszukiwany)
 
-for kontrola in dane/kontrola/*;do
-    if test -r "$kontrola";then
+for kontrola in dane/kontrola/*; do
+    if test -r "$kontrola"; then
         text=$(<"$kontrola")
-        if [ $text == $baza ];then
-            echo "$kontrola" | sed -e 's|.*/||'
+        if [ "$text" == "$baza" ]; then
+            basename "$kontrola"
         fi
     fi
 done

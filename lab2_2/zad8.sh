@@ -23,18 +23,11 @@
 # plików względem katalogu `dane/`. Każdą ścieżkę wyświetlić w osobnej linii.
 #
 
-for file in dane/*;do
-    if ! test -f "$file";then
-        for deep_file in "$file"/*;do
-            if test -f "$deep_file";then
-                if test -x "$deep_file";then
-                    echo "$deep_file" | sed 's|dane/||'
-                fi
-            fi
-        done
-    else
-        if test -x "$file";then
-            echo "$file" | sed 's|dane/||'
+for file in dane/* dane/*/*; do
+    
+        if [ -f "$file" ] && [ -x "$file" ]; then
+            echo "${file//dane\//}"
+            # echo "$file" | sed 's|dane/||'
         fi
-    fi
+
 done

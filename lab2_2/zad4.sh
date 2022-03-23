@@ -24,7 +24,7 @@
 for file in dane/icao/*;do
     if ! test -w "$file"
     then
-        cat $file
+        cat "$file"
     fi
 done
 
